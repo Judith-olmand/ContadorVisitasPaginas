@@ -1,4 +1,4 @@
-- BC3- COLECCIONES, FICHEROS Y ENTRADA/SALIDABC3- COLECCIONES, FICHEROS Y ENTRADA/SALIDA
+- BC3- COLECCIONES, FICHEROS Y ENTRADA/SALIDA
 Contador de Visitas a Páginas
 Herramienta de consola en Java diseñada para contabilizar la frecuencia de acceso a diferentes URLs o nombres de páginas web.
 

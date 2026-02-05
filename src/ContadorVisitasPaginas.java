@@ -7,20 +7,28 @@ public class ContadorVisitasPaginas {
         Scanner sc = new Scanner(System.in);
         Map<String, Integer> paginas = new HashMap<>();
 
-        String pagina;
+        String nombre;
 
         do {
-            System.out.println("Escribe el nombre de la página");
-            pagina = sc.nextLine();
-            if (pagina.equalsIgnoreCase("fin")){
-                System.out.println(paginas.entrySet());
+            System.out.println("Introduce el nombre del pagina: ");
+            nombre = sc.nextLine();
+            if(nombre.equalsIgnoreCase("fin")){
+                break;
             } else {
-                if (paginas.containsKey(pagina)){
-                    paginas.put(pagina, paginas.get(pagina) + 1);
-                } else{
-                    paginas.put(pagina, 1);
+                if(paginas.get(nombre) == null){
+                    paginas.put(nombre, 1);
+                } else {
+                    paginas.put(nombre, paginas.get(nombre) + 1);
                 }
             }
-        } while (!pagina.equalsIgnoreCase("fin"));
+        }while (!nombre.equalsIgnoreCase("fin"));
+
+        for(String pagina: paginas.keySet()){
+            System.out.println(pagina + " : " + paginas.get(pagina));
+        }
+
+        for (var pagina: paginas.entrySet()){
+            System.out.println("Página: " + pagina.getKey() + " - Numero de veces visitada: " + pagina.getValue());
+        }
     }
 }
